@@ -156,159 +156,258 @@
   }
 }
 
-/* Hero Section CSS */
-.main {
-  background-color: #141414;
-}
-
-.main__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+/* Game Section CSS */
+.games {
+  background: #141414;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-self: center;
-  margin: 0 auto;
   height: 100vh;
-  background-color: #141414;
-  z-index: 1;
-  width: 100%;
-  max-width: 1300px;
-  padding: 0 50px;
 }
 
-.main__content h1 {
-  font-size: 3.5rem;
+.games h1 {
   background-color: #6366ff;
-  background-image: linear-gradient(to top, #5356d8 0%, #b6b6ec 100%);
+  background-image: linear-gradient(
+    to right,
+    #b6b6ec 0%,
+    #7b7be2 52%,
+    #4446d1 100%
+  );
   background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-
-.main__content h2 {
+  margin-bottom: 5rem;
   font-size: 2.5rem;
-  background-color: #6366ff;
-  background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
-  background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 }
 
-.main__content p {
-  margin-top: 1rem;
-  font-size: 2rem;
-  font-weight: 700;
-  background-color: #6366ff;
-  background-image: linear-gradient(to right, #5356d8 0%, #b6b6ec 100%);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
+.games__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.main__btn {
-  font-size: 1rem;
-  background-image: linear-gradient(to top, #5356d8 0%, #9898e7 100%);
-  padding: 14px 32px;
-  border: none;
+.games__card .card__text {
+  visibility: hidden;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+.games__card .card__text2 {
+  visibility: hidden;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+.games__card {
+  margin: 1rem;
+  height: 525px;
+  width: 400px;
   border-radius: 4px;
-  color: #fff;
-  margin-top: 2rem;
-  cursor: pointer;
+
+  background-size: cover;
   position: relative;
-  transition: all 0.35s;
-  outline: none;
+  color: #fff;
 }
 
-.main__btn a {
+.games__card_image {
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+  margin: 1rem;
+  height: 525px;
+  width: 400px;
+  border-radius: 4px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 06) 100%
+    ),
+    url(/images/Game_Covers/Minecraft_cover.png);
+  background-size: cover;
   position: relative;
-  z-index: 2;
   color: #fff;
-  text-decoration: none;
 }
 
-.main__btn:after {
+.games__card_image2 {
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+  margin: 1rem;
+  height: 525px;
+  width: 400px;
+  border-radius: 4px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 06) 100%
+    ),
+    url(/images/Game_Covers/NMS_cover.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+}
+
+.games__card_image3 {
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+  margin: 1rem;
+  height: 525px;
+  width: 400px;
+  border-radius: 4px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 06) 100%
+    ),
+    url(/images/Game_Covers/Stardew_Valley_cover.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+}
+
+.games__card:hover h2.card__title {
+  top: 10%;
+  transition: 2s ease-in-out;
+}
+
+.games__card:hover .games__card_image,
+.games__card:hover .games__card_image2,
+.games__card:hover .games__card_image3 {
+  opacity: 0.1;
+}
+
+.games__card:hover .card__text {
+  background-color: #141414;
+  top: 30%;
+  visibility: visible;
+  opacity: 1;
+  transition: 2s ease-in-out;
+}
+
+.games__card:hover .card__text2 {
+  background-color: #141414;
+  top: 60%;
+  visibility: visible;
+  opacity: 1;
+  transition: 2s ease-in-out;
+}
+
+.games h2 {
   position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #4446b3;
-  transition: all 0.35s;
-  border-radius: 4px;
+  top: 350px;
+  left: 30px;
 }
 
-.main__btn:hover {
+.games__card p {
+  position: absolute;
+  top: 400px;
+  left: 30px;
+}
+
+.games__card button {
   color: #fff;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: #4446d1;
+  position: absolute;
+  top: 440px;
+  left: 30px;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-.main__btn:hover:after {
-  width: 100%;
+.games__card button2 {
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: #4446d1;
+  position: absolute;
+  top: 440px;
+  right: 30px;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-.main__img--container {
-  text-align: center;
+.games__card:hover {
+  transform: scale(1.075);
+  transition: 0.2s ease-in;
+  cursor: pointer;
 }
 
-#main__img {
-  height: 80%;
-  width: 80%;
-}
-
-/* Mobile Responsive */
-@media screen and (max-width: 768px) {
-  .main__container {
-    display: grid;
-    grid-template-columns: auto;
-    align-items: center;
-    justify-self: center;
-    width: 100%;
-    margin: 0 auto;
-    height: 95vh;
+@media screen and (max-width: 960px) {
+  .games {
+    height: 2100px;
   }
 
-  .main__content {
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-
-  .main__content h1 {
-    font-size: 2.5rem;
-    margin-top: 2rem;
-  }
-
-  .main__content h2 {
-    font-size: 3.5rem;
-  }
-
-  .main__content p {
-    font-size: 1rem;
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (max-with: 480px) {
-  .main__content h1 {
+  .games h1 {
     font-size: 2rem;
-    margin-top: 3rem;
+    margin-top: 12rem;
   }
 
-  .main__content h2 {
-    font-size: 2rem;
+  .games__card_image {
+    width: 400px;
+  }
+  .games__card_image2 {
+    width: 400px;
+  }
+  .games__card_image3 {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .games {
+    height: 2100px;
   }
 
-  .main__content p {
-    font-size: 2rem;
-    font-size: 1.5rem;
+  .games h1 {
+    font-size: 1.7rem;
   }
 
-  .main__btn {
-    padding: 12px 36px;
-    margin: 2.5rem 0;
+  .games__card {
+    width: 300px;
+  }
+  .games__card_image,
+  .games__card_image2,
+  .games__card_image3 {
+    width: 320px;
+  }
+  .games__card button,
+  .games__card button2 {
+    padding: 5px 10px;
+  }
+  .games__card:hover .card__text {
+    background-color: #141414;
+    top: 30%;
+    visibility: visible;
+    opacity: 1;
+    transition: 2s ease-in-out;
   }
 }
 
