@@ -162,7 +162,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 200vh;
 }
 
 .games h1 {
@@ -287,6 +287,52 @@
   color: #fff;
 }
 
+.games__card_image4 {
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+  margin: 1rem;
+  height: 525px;
+  width: 400px;
+  border-radius: 4px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 06) 100%
+    ),
+    url(/images/Game_Covers/Cyberpunk_2077.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+}
+
+.games__card_image5 {
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+  margin: 1rem;
+  height: 525px;
+  width: 400px;
+  border-radius: 4px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 06) 100%
+    ),
+    url(/images/Game_Covers/Elden_Ring.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+}
+
 .games__card:hover h2.card__title {
   top: 10%;
   transition: 2s ease-in-out;
@@ -294,7 +340,9 @@
 
 .games__card:hover .games__card_image,
 .games__card:hover .games__card_image2,
-.games__card:hover .games__card_image3 {
+.games__card:hover .games__card_image3,
+.games__card:hover .games__card_image4,
+.games__card:hover .games__card_image5 {
   opacity: 0.1;
 }
 
